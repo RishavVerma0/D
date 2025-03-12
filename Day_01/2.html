@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Package Reservation</title>
+</head>
+<body>
+
+    <form>
+        <label for="full-name">Full name*:</label><br>
+        <input type="text" id="full-name" name="full-name" placeholder="FirstName LastName" required><br><br>
+
+        <label for="email">Email address*:</label><br>
+        <input type="email" id="email" name="email" placeholder="EMAIL_ADDRESS" required><br><br>
+
+        <label for="tour-package">Select Tour Package*:</label><br>
+        <select id="tour-package" name="tour-package">
+            <option value="goa">Goa</option>
+            <option value="manali">Manali</option>
+            <option value="kerala">Kerala</option>
+        </select><br><br>
+
+        <label for="arrival-date">Arrival date*:</label><br>
+        <input type="date" id="arrival-date" name="arrival-date" required><br><br>
+
+        <label for="num-persons">Number of persons*:</label><br>
+        <input type="number" id="num-persons" name="num-persons" min="1" required><br><br>
+
+        <label>What would you want to avail?*</label><br>
+        <input type="checkbox" name="services" value="boarding"> Boarding<br>
+        <input type="checkbox" name="services" value="fooding"> Fooding<br>
+        <input type="checkbox" name="services" value="sightseeing"> Sightseeing<br><br>
+
+        <label for="coupon-code">Discount Coupon code:</label><br>
+        <input type="text" id="coupon-code" name="coupon-code"><br><br>
+
+        <label>Terms and conditions*</label><br>
+        <input type="radio" name="terms" value="agree" required> I agree<br>
+        <input type="radio" name="terms" value="disagree"> I disagree<br><br>
+
+        <button type="submit">Complete reservation</button>
+    </form>
+
+</body>
+</html>

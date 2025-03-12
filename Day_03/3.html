@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Store Data in JSON Format and Show in Table</h2>
+
+<button onclick="displayTable()">Show Data in Table</button>
+
+<table id="dataTable" border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Employment Status</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+<script>
+
+const data = [
+  {
+    "name": "Rishav Verma",
+    "age": 22,
+    "isEmployed": true
+  },
+  {
+    "name": "Ayush",
+    "age": 23,
+    "isEmployed": false
+  },
+  {
+    "name": "Rahul",
+    "age": 22,
+    "isEmployed": true
+  }
+];
+
+
+function displayTable() {
+  const tableBody = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+  tableBody.innerHTML = '';
+  data.forEach(person => {
+    const row = tableBody.insertRow();
+    const nameCell = row.insertCell(0);
+    const ageCell = row.insertCell(1);
+    const employmentCell = row.insertCell(2);
+
+    nameCell.innerHTML = person.name;
+    ageCell.innerHTML = person.age;
+    employmentCell.innerHTML = person.isEmployed ? "Employed" : "Not Employed";
+  });
+}
+</script>
+
+</body>
+</html>

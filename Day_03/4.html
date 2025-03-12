@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Store Data in JSON Format and Show in List</h2>
+
+<button onclick="displayList()">Show Data in List</button>
+
+<ul id="dataList">
+</ul>
+
+<script>
+
+const data = [
+{
+    "name": "Rishav Verma",
+    "age": 22,
+    "isEmployed": true
+  },
+  {
+    "name": "Ayush",
+    "age": 23,
+    "isEmployed": false
+  },
+  {
+    "name": "Rahul",
+    "age": 22,
+    "isEmployed": true
+  }
+];
+
+
+function displayList() {
+  const listContainer = document.getElementById("dataList");
+  listContainer.innerHTML = '';
+
+  data.forEach(person => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `Name: ${person.name}, Age: ${person.age}, Employment Status: ${person.isEmployed ? "Employed" : "Not Employed"}`;
+    listContainer.appendChild(listItem);
+  });
+}
+</script>
+
+</body>
+</html>

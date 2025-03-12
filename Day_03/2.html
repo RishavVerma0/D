@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Store Data in JSON Format and Show as String</h2>
+
+    <button onclick="showJSON()">Show Data</button>
+    <p id="demo"></p>
+
+    <script>
+ 
+      const person = {
+        name: "Rishav Verma",
+        age: 22,
+        isEmployed: true,
+      };
+
+   
+      function showJSON() {
+        const jsonString = JSON.stringify(person);
+        document.getElementById("demo").innerHTML = jsonString;
+      }
+    </script>
+  </body>
+</html>

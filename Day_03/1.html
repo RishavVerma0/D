@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The JavaScript typeof Operator</h2>
+
+    <p>The typeof operator returns the type of a variable or expression:</p>
+    <input id="in" type="number" placeholder="enter a number" />
+    <p id="demo"></p>
+    <button onmouseover="evenOrOdd()" onmouseout="primeOrNot()">add</button>
+
+    <script>
+      function evenOrOdd() {
+        var num = document.getElementById("in").value; 
+        var result = num % 2 === 0 ? "Even" : "Odd"; 
+        document.getElementById("demo").innerHTML = "The number is " + result;  
+      }
+
+      function primeOrNot() {
+        var num = document.getElementById("in").value; 
+        if (num < 2) {
+          document.getElementById("demo").innerHTML = "The number is not prime";
+          return;
+        }
+        for (var i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      document.getElementById("demo").innerHTML = "The number is not prime.";
+      return;
+    }
+  }
+  
+  document.getElementById("demo").innerHTML = "The number is prime."; 
+      }
+    </script>
+  </body>
+</html>

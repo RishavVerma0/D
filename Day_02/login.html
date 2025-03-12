@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+        .container {
+            display: flex;
+            width: 600px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-panel {
+            background: #111;
+            color: white;
+            width: 40%;
+            padding: 30px;
+            text-align: center;
+        }
+        .left-panel h1 {
+            margin-bottom: 20px;
+        }
+        .left-panel button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .facebook { background: #4267B2; color: white; }
+        .twitter { background: #1DA1F2; color: white; }
+        .google { background: #DB4437; color: white; }
+        .right-panel {
+            padding: 30px;
+            width: 60%;
+        }
+        .right-panel h2 {
+            margin-bottom: 10px;
+        }
+        .input-group {
+            margin: 15px 0;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #4C8BF5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>TOP HTML</h1>
+            <p>Login using social media to get quick access</p>
+            <button class="facebook">Sign in with Facebook</button>
+            <button class="twitter">Sign in with Twitter</button>
+            <button class="google">Sign in with Google</button>
+        </div>
+        <div class="right-panel">
+            <h2>Login to your account</h2>
+            <p>Don't have an account? <a href="#">Sign Up Free!</a></p>
+            <div class="input-group">
+                <input type="email" placeholder="Email address">
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="login-btn">Login with Email</button>
+        </div>
+    </div>
+</body>
+</html>

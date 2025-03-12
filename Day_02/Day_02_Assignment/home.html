@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Flowers School</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(./IMG_9538-retouched-1500px.jpg);
+        }
+        .container {
+            margin-top: 20px;
+        }
+        #timetable {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Spring Flowers School</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="showTimetable">TimeTable</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container text-center">
+        <h2>Welcome to Spring Flowers School</h2>
+        <div id="timetable" class="mt-4">
+            <h3>Your Timetable</h3>
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Day</th>
+                        <th>Subject</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday</td><td>Math</td><td>9:00 AM - 10:00 AM</td></tr>
+                    <tr><td>Tuesday</td><td>Science</td><td>10:00 AM - 11:00 AM</td></tr>
+                    <tr><td>Wednesday</td><td>English</td><td>11:00 AM - 12:00 PM</td></tr>
+                    <tr><td>Thursday</td><td>History</td><td>1:00 PM - 2:00 PM</td></tr>
+                    <tr><td>Friday</td><td>Geography</td><td>2:00 PM - 3:00 PM</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#showTimetable').click(function() {
+                $('#timetable').toggle();
+            });
+        });
+    </script>
+</body>
+</html>

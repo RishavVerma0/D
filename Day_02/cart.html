@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<hdjkead>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>CarsBaazaar</title>
+    <style>
+        .carousel {
+            max-width: 100%;
+            max-height: 400px; 
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: fit-content;
+            object-fit: cover;
+        }
+        h1 {
+            text-align: center;
+        }
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+            display: none;
+        }
+        #cart ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <a class="navbar-brand" href="#">CarsBaazaar</a>
+    </nav>
+
+    <div id="cart">
+        <h5>Shopping Cart <i class="fas fa-shopping-cart"></i></h5>
+        <ul id="cart-items"></ul>
+        <button class="btn btn-danger btn-sm" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <h1>Most Frequently Purchased</h1>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./image.png" class="card-img-top" alt="Car One">
+                    <div class="card-body">
+                        <h5 class="card-title">Car One</h5>
+                        <p class="card-text">$25,000</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Car One" data-price="25000">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./image copy.png" class="card-img-top" alt="Car Two">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Two</h5>
+                        <p class="card-text">$30,000</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Car Two" data-price="30000">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./image copy 2.png" class="card-img-top" alt="Car Three">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Three</h5>
+                        <p class="card-text">$35,000</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Car Three" data-price="35000">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>   
+    <script>
+        $(document).ready(function () {
+            $(".add-to-cart").click(function () {
+                let name = $(this).data("name");
+                let price = $(this).data("price");
+                let cart = $("#cart-items");
+
+                cart.append(`<li>${name} - $${price}</li>`);
+                $("#cart").show();
+            });
+        });
+
+        function clearCart() {
+            $("#cart-items").empty();
+            $("#cart").hide();
+        }
+    </script>
+</body>
+</html>

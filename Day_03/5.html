@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            white-space: pre-line;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Multiplication Table Generator</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="output"></div>
+
+    <script>
+        function generateTable() {
+            let num = document.getElementById("numberInput").value;
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "";
+
+            if (num === "") {
+                outputDiv.innerHTML = "Please enter a number";
+                return;
+            }
+
+            let table = "Multiplication Table for " + num + "\n";
+            for (let i = 1; i <= 10; i++) {
+                table += num + " × " + i + " = " + (num * i) + "\n";
+            }
+
+            outputDiv.innerText = table;
+        }
+    </script>
+</body>
+</html>

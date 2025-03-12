@@ -1,0 +1,9 @@
+#body{
+    background-color: antiquewhite;
+}
+#form{
+    background-color: aquamarine;
+    text-align: center;
+    height:fit-content;
+    width:fit-content;
+}

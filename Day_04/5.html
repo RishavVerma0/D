@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+
+<body>
+    <h1>Fetch API Example</h1>
+  
+    <button onclick="fetchData()" id="fetchButton">Fetch Data</button>
+  
+    <div id="data">
+      <h2>Fetched Data:</h2>
+      <pre id="output"></pre>
+    </div>
+  
+    <script>
+      // Function to fetch data from the API
+      function fetchData() {
+        const url = 'https://jsonplaceholder.typicode.com/users'; // Example API URL
+  
+        // Use the fetch API to retrieve data
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            // Display the fetched data
+            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+          })
+          .catch(error => {
+            // Handle any errors
+            document.getElementById('output').textContent = `Error: ${error.message}`;
+          });
+      }
+  
+      // Attach event listener to the button
+   
+    </script>
+  </body>
+  </html>

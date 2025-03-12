@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your House</title>
+    <style>
+        /* style.css */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Background Image */
+        .bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url(./Modern-dark-int.jpg) no-repeat center center/cover; 
+        }
+
+        /* Overlay for semi-transparent effect */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: transparent;
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white;
+            
+        }
+
+        .navbar-menu {
+            text-align: right;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 200px 0;
+            color: white;
+            z-index: 2;
+            
+        }
+
+        .hero-content {
+            padding: 50px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #btn-1 {
+            background-color: #008080; 
+            border-radius: 20px;
+        }
+
+        #btn-2 {
+            background-color: transparent;
+            border-radius: 20px;
+            border: 2px solid #008080;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <div class="overlay"></div>
+
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">!Nterior</a>
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BEDROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DINING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">KITCHEN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BACKYARD</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>DESIGN YOUR HOUSE</h1>
+                <p>Subscribe Easy Tutorials YouTube Channel to watch more videos, press the bell icon to get latest updates.</p>
+                <div class="button-group">
+                    <a href="#" class="button" id="btn-1">WATCH MORE</a>
+                    <a href="#" class="button" id="btn-2">SUBSCRIBE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
